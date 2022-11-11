@@ -14,7 +14,7 @@ function Orderslist() {
 
     const getorders = async () => {
         try {
-            const { data } = await axios.get("http://localhost:5000/api/orders/payment", {
+            const { data } = await axios.get("https://feedingkurtis.herokuapp.com/api/orders/payment", {
                 headers: {
                     "Authorization": `Bearer ${Aauth}`
                 }
@@ -37,7 +37,7 @@ function Orderslist() {
     }, []);
     async function statusupdate(order) {
         try {
-            const res = await axios.put(`http://localhost:5000/api/orders/statusupdate/${order._id}`, order, {
+            const res = await axios.put(`https://feedingkurtis.herokuapp.com/api/orders/statusupdate/${order._id}`, order, {
                 headers: {
                     "Authorization": `Bearer ${Aauth}`
                 }

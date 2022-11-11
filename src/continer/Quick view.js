@@ -18,7 +18,7 @@ function Quick() {
 
     const getquickview = async () => {
         try {
-            const res = await axios.get(`http://localhost:5000/api/quick/${id}`, {
+            const res = await axios.get(`https://feedingkurtis.herokuapp.com/api/quick/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${Uauth}`
                 }

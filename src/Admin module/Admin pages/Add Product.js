@@ -22,7 +22,7 @@ function addproduct() {
 
     async function newproduct() {
         try {
-            const { data } = await axios.post("http://localhost:5000/api/addProduct", Product,{
+            const { data } = await axios.post("https://feedingkurtis.herokuapp.com/api/addProduct", Product,{
                 headers: {
                 "Authorization": `Bearer ${Aauth}`
             }

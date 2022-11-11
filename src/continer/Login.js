@@ -21,7 +21,7 @@ function Login() {
     async function Ulogin() {
         const id = window.localStorage.getItem("Id")
         try {
-            const { data: { authToken } } = await axios.post("http://localhost:5000/api/auth/ulogin", ulogin);
+            const { data: { authToken } } = await axios.post("https://feedingkurtis.herokuapp.com/api/auth/ulogin", ulogin);
             window.localStorage.setItem("Uauth", authToken)
             window.localStorage.setItem("Uemail",ulogin.Email)
             navigate(`/quick/${id}`, { replace: true })

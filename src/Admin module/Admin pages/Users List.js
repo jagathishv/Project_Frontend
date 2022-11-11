@@ -14,7 +14,7 @@ function userslist() {
 
     async function getuserslists() {
         try {
-            const { data } = await axios.get("http://localhost:5000/api/userslist", {
+            const { data } = await axios.get("https://feedingkurtis.herokuapp.com/api/userslist", {
                 headers: {
                     "Authorization": `Bearer ${Aauth}`
                 }

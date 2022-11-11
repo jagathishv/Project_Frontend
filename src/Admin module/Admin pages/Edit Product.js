@@ -13,7 +13,7 @@ function editproduct() {
 
     const Editid = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/api/productdata/${id}`, {
+            const { data } = await axios.get(`https://feedingkurtis.herokuapp.com/api/productdata/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${Aauth}`
                 }
@@ -38,7 +38,7 @@ function editproduct() {
     }
     async function Update() {
         try {
-            const { data } = await axios.put(`http://localhost:5000/api/productdata/${id}`, eproduct, {
+            const { data } = await axios.put(`https://feedingkurtis.herokuapp.com/api/productdata/${id}`, eproduct, {
                 headers: {
                     "Authorization": `Bearer ${Aauth}`
                 }

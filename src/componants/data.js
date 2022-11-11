@@ -55,7 +55,7 @@ const Cart = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const res = await axios.post("http://localhost:5000/api/payment", {
+        const res = await axios.post("https://feedingkurtis.herokuapp.com/api/payment", {
           tokenId: stripeToken.id,
           amount: { total },
         });
@@ -71,7 +71,7 @@ const Cart = () => {
   // Order Api
   const getOrders = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/order", {
+      const res = await axios.post("https://feedingkurtis.herokuapp.com/api/order", {
         userId,
         product,
         total,

@@ -16,7 +16,7 @@ function Adminlogin() {
 
     async function Alogin() {
         try {
-            const { data: { authToken } } = await axios.post("http://localhost:5000/api/auth/alogin", alogin);
+            const { data: { authToken } } = await axios.post("https://feedingkurtis.herokuapp.com/api/auth/alogin", alogin);
             window.localStorage.setItem("Aauth", authToken)
             navigate("/mainpage", { replace: true })
         } catch ({ response: { data } }) {
