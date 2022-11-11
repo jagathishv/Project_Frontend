@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
-import Footer from "../componants/Footer";
+import AdminFooter from "./Admin pages/Admin footer"
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -44,6 +44,17 @@ function Adminlogin() {
             </nav>
             <div className="container my-5">
                 <div className="row">
+                    <div className="col-4"></div>
+                    <div className="col-4">
+                        <p>Login and Explore</p>
+                    <p>Email : jagathishveerappan@gmail.com</p>
+                     <p> Password: 12345</p>
+                     </div>
+                    <div className="col-4"></div>
+                </div>
+            </div>
+            <div className="container my-5">
+                <div className="row">
                     <div className="col-3"></div>
                     <div className="col-6">
                         <div className="card">
@@ -76,7 +87,7 @@ function Adminlogin() {
                     <div className="col-3"></div>
                 </div>
             </div>
-            <Footer />
+            <AdminFooter />
         </>
     );
 }

@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-import AdnimNavigation from "./Admin Navigation";
+import AdminNavigation from "./Admin Navigation";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-
+import AdminFooter from "./Admin footer";
 function editproduct() {
     const navigate = useNavigate();
     let { id } = useParams();
-   
+
     const [eproduct, seteproduct] = useState({});
 
     const Aauth = window.localStorage.getItem("Aauth")
 
     const Editid = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/api/productdata/${id}`,{
+            const { data } = await axios.get(`http://localhost:5000/api/productdata/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${Aauth}`
                 }
@@ -22,7 +22,7 @@ function editproduct() {
         } catch ({ response: { data, status } }) {
             if (status == "403" || status == "401") {
                 window.localStorage.clear();
-               navigate("/adminlogin", { replace: true })
+                navigate("/adminlogin", { replace: true })
             }
             else {
                 alert(data.error)
@@ -33,12 +33,12 @@ function editproduct() {
         Editid();
     }, [])
 
-    const Productchange= ({ target: { name,value } }) =>{
+    const Productchange = ({ target: { name, value } }) => {
         seteproduct({ ...eproduct, [name]: value })
     }
     async function Update() {
         try {
-            const { data } = await axios.put(`http://localhost:5000/api/productdata/${id}`, eproduct,{
+            const { data } = await axios.put(`http://localhost:5000/api/productdata/${id}`, eproduct, {
                 headers: {
                     "Authorization": `Bearer ${Aauth}`
                 }
@@ -46,7 +46,7 @@ function editproduct() {
         } catch ({ response: { data, status } }) {
             if (status == "403" || status == "401") {
                 window.localStorage.clear();
-               navigate("/adminlogin", { replace: true })
+                navigate("/adminlogin", { replace: true })
             }
             else {
                 alert(data.error)
@@ -61,7 +61,7 @@ function editproduct() {
 
     return (
         <>
-            <AdnimNavigation />
+            <AdminNavigation />
             <div className="container my-5">
                 <div className="row">
                     <div className="col-3"></div>
@@ -120,7 +120,7 @@ function editproduct() {
 
                 </div>
             </div >
-
+            <AdminFooter />
         </>
     )
 }

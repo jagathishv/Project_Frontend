@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import AdnimNavigation from "./Admin Navigation";
-import Footer from "../../componants/Footer";
+import AdminNavigation from "./Admin Navigation";
+import AdminFooter from "./Admin footer";
 
 function AOrdersinfo() {
     let count = 0;
@@ -17,7 +17,7 @@ function AOrdersinfo() {
     }, [])
     return (
         <>
-            < AdnimNavigation />
+            < AdminNavigation />
             <br />
             <div className="container mt-4">
                 <div className="row">
@@ -59,7 +59,7 @@ function AOrdersinfo() {
             </div>
 
             <br />
-            <Footer />
+            <AdminFooter />
         </>
     );
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AdnimNavigation from "./Admin Navigation";
-import Footer from "../../componants/Footer";
+import AdminNavigation from "./Admin Navigation";
+import AdminFooter from "./Admin footer";
 
 function Mainpage() {
     return (
         <>
-            <AdnimNavigation />
+            <AdminNavigation />
             <div className="continer my-5">
                 <div className="row">
                     <div className="col"></div>
@@ -40,7 +40,7 @@ function Mainpage() {
                     <div className="col"></div>
                 </div>
             </div>
-            <Footer />
+            <AdminFooter />
 
         </>
     )

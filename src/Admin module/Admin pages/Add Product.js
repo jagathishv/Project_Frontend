@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import AdnimNavigation from "./Admin Navigation";
+import AdminNavigation from "./Admin Navigation";
+import AdminFooter from "./Admin footer";
 import axios from "axios";
-import Footer from "../../componants/Footer";
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
@@ -47,7 +47,7 @@ function addproduct() {
     }
     return (
         <>
-            <AdnimNavigation />
+            <AdminNavigation />
             <div className="container my-5">
                 <div className="row">
                     <div className="col-3"></div>
@@ -114,7 +114,7 @@ function addproduct() {
 
                 </div>
             </div >
-            <Footer />
+            <AdminFooter />
         </>
     )
 }

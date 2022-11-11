@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import AdnimNavigation from "./Admin Navigation";
-import Footer from "../../componants/Footer";
+import AdminNavigation from "./Admin Navigation";
+import AdminFooter from "./Admin footer";
 
 function Orderslist() {
     let count = 0;
@@ -56,7 +56,7 @@ function Orderslist() {
 
     return (
         <>
-            < AdnimNavigation />
+            < AdminNavigation />
             <br />
             <div className="container mt-4">
                 <div className="row">
@@ -98,7 +98,7 @@ function Orderslist() {
                 </div>
             </div>
             <br />
-            <Footer />
+            <AdminFooter />
         </>
     );
 }

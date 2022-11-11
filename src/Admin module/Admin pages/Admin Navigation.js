@@ -2,7 +2,7 @@ import React  from "react";
 import { Link } from "react-router-dom";
 //import swal from "sweetalert/typings/core";
 
-function AdnimNavigation() {
+function AdminNavigation() {
     // const navigate=useNavigate()
     // const Logout = () => {
     //     window.localStorage.clear();
@@ -25,4 +25,4 @@ function AdnimNavigation() {
     )
 }
 
-export default AdnimNavigation;
+export default AdminNavigation;
