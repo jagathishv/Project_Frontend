@@ -14,7 +14,7 @@ function Orders() {
 
     const getorders = async () => {
         try {
-            const { data } = await axios.get("https://feedingkurtis.herokuapp.com/api/orders/myorders", {
+            const { data } = await axios.get("https://project-backend-sqkd.vercel.app/api/orders/myorders", {
                 headers: {
                     "Authorization": `Bearer ${Uauth}`
                 }

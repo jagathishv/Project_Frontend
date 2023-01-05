@@ -13,7 +13,7 @@ function editproduct() {
 
     const Editid = async () => {
         try {
-            const { data } = await axios.get(`https://feedingkurtis.herokuapp.com/api/productdata/${id}`, {
+            const { data } = await axios.get(`https://project-backend-sqkd.vercel.app/api/productdata/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${Aauth}`
                 }
@@ -38,7 +38,7 @@ function editproduct() {
     }
     async function Update() {
         try {
-            const { data } = await axios.put(`https://feedingkurtis.herokuapp.com/api/productdata/${id}`, eproduct, {
+            const { data } = await axios.put(`https://project-backend-sqkd.vercel.app/api/productdata/${id}`, eproduct, {
                 headers: {
                     "Authorization": `Bearer ${Aauth}`
                 }

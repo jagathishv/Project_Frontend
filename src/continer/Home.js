@@ -28,7 +28,7 @@ function Home() {
     useEffect(() => {
         const getProducts = async () => {
             try {
-                const res = await axios.get("https://feedingkurtis.herokuapp.com/api/homeproduct")
+                const res = await axios.get("https://project-backend-sqkd.vercel.app/api/homeproduct")
                // const total = res.headers.get("total-count");
                 //setpageCount(Math.ceil(total / limit));
                 setProducts(res.data);
@@ -43,7 +43,7 @@ function Home() {
 
     // const getProduct = async (currentPage) => {
     //     try {
-    //         const res = await axios.get(`https://feedingkurtis.herokuapp.com/api/homeproduct?_page=${currentPage}&_limit=${limit}`)
+    //         const res = await axios.get(`https://project-backend-sqkd.vercel.app/api/homeproduct?_page=${currentPage}&_limit=${limit}`)
     //         return res.data;
     //     } catch (data) {
     //         alert(data.error)

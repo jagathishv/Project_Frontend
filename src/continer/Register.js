@@ -21,7 +21,7 @@ function Register() {
     };
     async function createuser() {
         try {
-            const { data } = await axios.post("https://feedingkurtis.herokuapp.com/api/auth/register", user);
+            const { data } = await axios.post("https://project-backend-sqkd.vercel.app/api/auth/register", user);
             window.localStorage.setItem("User Name", user.FullName)
             swal("Register Successfully");
             navigate("/login");

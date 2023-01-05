@@ -44,7 +44,7 @@ export default function Cart() {
   async function handleToken(token, addresses) {
     // send to payment
     try {
-      const response = await axios.post("https://feedingkurtis.herokuapp.com/api/orders/payment", {
+      const response = await axios.post("https://project-backend-sqkd.vercel.app/api/orders/payment", {
         token,
         product,
       }, {

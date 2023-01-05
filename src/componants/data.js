@@ -55,7 +55,7 @@ const Cart = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const res = await axios.post("https://feedingkurtis.herokuapp.com/api/payment", {
+        const res = await axios.post("https://project-backend-sqkd.vercel.app/api/payment", {
           tokenId: stripeToken.id,
           amount: { total },
         });
@@ -71,7 +71,7 @@ const Cart = () => {
   // Order Api
   const getOrders = async () => {
     try {
-      const res = await axios.post("https://feedingkurtis.herokuapp.com/api/order", {
+      const res = await axios.post("https://project-backend-sqkd.vercel.app/api/order", {
         userId,
         product,
         total,

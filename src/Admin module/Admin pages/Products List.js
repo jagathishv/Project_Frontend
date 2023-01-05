@@ -15,7 +15,7 @@ function productslist() {
 
   async function getproductDatas() {
     try {
-      const { data } = await axios.get("https://feedingkurtis.herokuapp.com/api/productdata", {
+      const { data } = await axios.get("https://project-backend-sqkd.vercel.app/api/productdata", {
         headers: {
           "Authorization": `Bearer ${Aauth}`
         }
@@ -41,7 +41,7 @@ function productslist() {
   const deleteProduct = async ({ _id }) => {
     if (window.confirm(`Are You Sure You Want to Delete this Product ${_id}`)) {
       try {
-        await axios.delete(`https://feedingkurtis.herokuapp.com/api/productdata/${_id}`, {
+        await axios.delete(`https://project-backend-sqkd.vercel.app/api/productdata/${_id}`, {
           headers: {
             "Authorization": `Bearer ${Aauth}`
           }

@@ -18,7 +18,7 @@ function Quick() {
 
     const getquickview = async () => {
         try {
-            const res = await axios.get(`https://feedingkurtis.herokuapp.com/api/quick/${id}`, {
+            const res = await axios.get(`https://project-backend-sqkd.vercel.app/api/quick/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${Uauth}`
                 }
